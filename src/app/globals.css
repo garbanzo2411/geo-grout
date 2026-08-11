@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+    --color-charcoal: #171512;
+    --color-charcoal-2: #1f1c18;
+    --color-paper: #f3efe7;
+    --color-paper-2: #ece6d9;
+    --color-red: #c22a2a;
+    -color-orange: #e4671f;
+    --color-steel: #8a8578;
+    --color-steel-dim: #5b584f;
+    --color-white: #fbf9f5;
+}
+
+@theme inline {
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-2: var(--color-charcoal-2);
+  --color-paper: var(--color-paper);
+  --color-paper-2: var(--color-paper-2);
+  --color-red: var(--color-red);
+  --color-orange: var(--color-orange);
+  --color-steel: var(--color-steel);
+  --color-steel-dim: var(--color-steel-dim);
+  --color-white: var(--color-white);
+
+  --font-display: var(--font-anton);
+  --font-heading: var(--font-oswald);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Grout line motif: thin rules with a diamond "joint" ---- */
+.grout-line {
+  position: relative;
+  height: 1px;
+  background: var(--color-steel);
+  opacity: 0.35;
+}
+.grout-line.dark {
+  background: #4a463d;
+  opacity: 1;
+}
+.joint {
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--color-orange);
+}
+
+/* ---- Spec tag: stamped eyebrow label ---- */
+.spec-tag {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid currentColor;
+}
+.spec-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
