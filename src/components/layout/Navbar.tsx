@@ -19,11 +19,11 @@ export default function Navbar() {
       className={[
         "fixed top-0 inset-x-0 z-50 transition-colors duration-300",
         scrolled
-          ? "bg-gradient-to-r from-red to-orange shadow-md"
+          ? "bg-linear-to-r from-red to-orange shadow-md"
           : "bg-charcoal/20 backdrop-blur-md",
       ].join(" ")}
     >
-      <nav className="max-w-[1180px] mx-auto flex items-center justify-between px-6 md:px-8 py-5">
+      <nav className="max-w-295 mx-auto flex items-center justify-between px-6 md:px-8 py-5">
         <Link
           href="/"
           className="font-display text-xl tracking-wide text-white flex items-center gap-2"
@@ -34,7 +34,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-9 font-heading text-[13px] tracking-[0.1em] uppercase text-white/85">
+        <div className="hidden md:flex items-center gap-9 font-heading text-[13px] tracking-widest uppercase text-white/85">
           {NAV_LINKS.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-white transition-colors">
               {link.label}
@@ -52,7 +52,7 @@ export default function Navbar() {
           <Link
             href={CONTACT_LINK.href}
             className={[
-              "font-heading text-[13px] tracking-[0.1em] uppercase px-5 py-2.5 border transition-colors",
+              "font-heading text-[13px] tracking-widest uppercase px-5 py-2.5 border transition-colors",
               scrolled
                 ? "border-charcoal text-charcoal hover:bg-charcoal hover:text-white"
                 : "border-white/70 text-white hover:bg-white hover:text-charcoal",

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Anton, Oswald, Inter, IBM_Plex_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 
 const anton = Anton({
