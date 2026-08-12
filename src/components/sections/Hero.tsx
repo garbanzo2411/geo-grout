@@ -1,14 +1,36 @@
+import Image from "next/image";
 import { SITE } from "@/lib/constants";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden bg-charcoal">
-      {/*
-        Background: swap this div for a full-bleed <video> or next/image of a real
-        job-site clip once footage is available. Keeping it a plain layer for now
-        so the overlay/scrim treatment can be dialed in against real footage.
-      */}
       <div className="absolute inset-0">
+        {/*
+          Drop a real photo at public/images/hero/hero.jpg (or .webp/.png) and
+          this renders it full-bleed automatically — no other code changes needed.
+          For a video background instead, see the commented <video> block below.
+        */}
+        <Image
+          src="/images/hero/hero.jpg"
+          alt="GeoGrout crew performing geotechnical grouting work on a job site"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* --- Video alternative: comment out the <Image> above, uncomment this ---
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero/hero-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-clip.mp4" type="video/mp4" />
+        </video>
+        --- */}
+
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_30%,rgba(228,103,31,0.14),transparent_70%)]" />
         <div
           className="absolute inset-0 opacity-[0.07]"
@@ -23,7 +45,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-295 mx-auto px-6 md:px-8 pb-24 pt-40">
         <span className="spec-tag text-orange mb-7">San Francisco, CA</span>
-        <h1 className="font-display text-white text-[10vw] leading-[0.95] sm:text-[7vw] md:text-[4.8vw] max-w-4xl">
+        <h1 className="font-display text-white text-[13vw] leading-[0.95] sm:text-[9vw] md:text-[6.2vw] max-w-4xl">
           {SITE.tagline}
         </h1>
         <p className="mt-7 max-w-lg text-[#c9c4b8] text-base md:text-lg leading-relaxed">
