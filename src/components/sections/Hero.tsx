@@ -23,7 +23,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-295 mx-auto px-6 md:px-8 pb-24 pt-40">
         <span className="spec-tag text-orange mb-7">San Francisco, CA</span>
-        <h1 className="font-display text-white text-[13vw] leading-[0.95] sm:text-[9vw] md:text-[6.2vw] max-w-4xl">
+        <h1 className="font-display text-white text-[10vw] leading-[0.95] sm:text-[7vw] md:text-[4.8vw] max-w-4xl">
           {SITE.tagline}
         </h1>
         <p className="mt-7 max-w-lg text-[#c9c4b8] text-base md:text-lg leading-relaxed">
