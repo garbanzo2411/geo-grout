@@ -11,7 +11,7 @@ export default function Hero() {
           For a video background instead, see the commented <video> block below.
         */}
         <Image
-          src="/images/hero/hero.jpg"
+          src="/images/hero/grout-team-hero.webp"
           alt="GeoGrout crew performing geotechnical grouting work on a job site"
           fill
           priority
@@ -45,7 +45,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-295 mx-auto px-6 md:px-8 pb-24 pt-40">
         <span className="spec-tag text-orange mb-7">San Francisco, CA</span>
-        <h1 className="font-display text-white text-[13vw] leading-[0.95] sm:text-[9vw] md:text-[6.2vw] max-w-4xl">
+        <h1 className="font-display text-white text-[8vw] leading-[0.95] sm:text-[5.5vw] md:text-[3.8vw] max-w-4xl">
           {SITE.tagline}
         </h1>
         <p className="mt-7 max-w-lg text-[#c9c4b8] text-base md:text-lg leading-relaxed">
