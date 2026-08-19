@@ -4,6 +4,7 @@ export const SITE = {
     phoneHref: "tel:+14152852400",
     email: "inquiries@gggms.com",
     address: "2194 Palou Ave, San Francisco, CA 94124",
+    hours: "Mon-Fri, 6:30 AM - 5:00 PM",
     tagline: "Geotechnical Contractors for 40 Years",
 };
 
